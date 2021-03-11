@@ -7,17 +7,26 @@ Program Goals:
     b. Return a value at a specific index position
 
 """
+import random
+myList = []
 
 def mainProgram():
-    myList = []
-    print("Hello, there! Let's work with lists!")
-    print("Choose from the following options. Type a number!")
-    choice = input("1. Add to a list or 2. Return a value at an index  ")
-    #add a way to catch bad user responses
-    if choice == "1":
-        addToList()
-    elif choice == "2":
-        indexValues()
+    while True:
+        print("Hello, there! Let's work with lists!")
+        print("Choose from the following options. Type a number!")
+        choice = input("""1. Add to a list or
+2. Return a value at an index
+3. Random Search
+4. Quit Program""")
+        #add a way to catch bad user responses
+        if choice == "1":
+            addToList()
+        elif choice == "2":
+            indexValues()
+        elif choice == "3":
+            randomSearch
+        else:
+            break
 
 def addToList():
     print("Adding to a list! Great choice!")
@@ -25,6 +34,13 @@ def addToList():
     myList.append(int(newItem))
 
 def indexValues():
+    print("Curious about an index position? ME TOO!")
+    indexPos = input("What index position would you like to check out?  ")
+    print(myList[int(indexPos)])
+
+def randomSearch():
+    print("RaNdOm SeArCh?!?")
+    print(myList[random.randint(0, len(myList)-1]
 
     
 #dunder main -> Double Underscore---dunder
